@@ -1,0 +1,35 @@
+<html>
+
+<body onload="play()">
+</body>
+
+<script>
+function play() {
+alert('the secret number');
+goodNumber = Math.trunc(Math.random() * 10) + 1;
+
+alert('I have choosen a number between 1 to 10');
+alert('try to find the secret number');
+
+var answer;
+var score = 0;
+
+while (answer != goodNumber) {
+	answer = prompt('enter your answer');
+
+	if (answer == goodNumber) {
+		alert('YOU WIN !');
+	} else if (answer < goodNumber) {
+		alert('the secret number is bigger');
+	} else if (answer > goodNumber) {
+		alert('the secret number is smaller');
+	}
+
+  score = score + 1;
+}
+
+alert('good job you took ' + score + ' tries ');
+}
+</script>
+
+</html>
